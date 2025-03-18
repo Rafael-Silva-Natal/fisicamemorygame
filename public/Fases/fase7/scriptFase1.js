@@ -172,7 +172,7 @@ function checkCards() {
      // Função para redirecionar a pagina
      function redirecionar1() {
       // Altere o URL abaixo para a página desejada
-      window.location.href = "https://rafael-silva-natal.github.io/fisicamemorygame/";
+      window.location.href = "../fase8/PaginaFinal.html";
   }
 
   // Obtém o elemento do botão por seu ID
