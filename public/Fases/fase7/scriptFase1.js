@@ -172,7 +172,7 @@ function checkCards() {
      // Função para redirecionar a pagina
      function redirecionar1() {
       // Altere o URL abaixo para a página desejada
-      window.location.href = "C:/Users/Laptop/Desktop/FisicaMemGame_versão1/public/Fases/fase2/fase2.html";
+      window.location.href = "PaginaFinal.html";
   }
 
   // Obtém o elemento do botão por seu ID
