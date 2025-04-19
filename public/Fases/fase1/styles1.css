@@ -12,10 +12,11 @@ body {
     z-index: 1;
   }
   
-  h1 {
-    margin: 10px 0;
-    font-size: 1.5em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  h5 {
+    color:rgb(7, 248, 27);
+    margin: 1px 0;
+    font-size: 1.5m;
+    text-shadow: 2px 2px 4px rgba(250, 20, 20, 0.342);
     z-index: 10;
   }
   
@@ -27,6 +28,7 @@ body {
     max-width: 1200px;
     margin: 10px 0;
     z-index: 10;
+    margin-bottom: 0px;
   }
   
   .stats-container {
