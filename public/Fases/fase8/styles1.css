@@ -1,107 +1,151 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #3e424b, #b0acb8);
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
 
-  body {
-   
-    zoom: 1;/*ajuste do zomm inicial da pagina*/
-    
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-color: #f0f0f0;
-  }
+h5 {
+  color:rgb(7, 248, 27);
+  margin: 1px 0;
+  font-size: 1.5m;
+  text-shadow: 2px 2px 4px rgba(250, 20, 20, 0.342);
+  z-index: 10;
+}
 
+.controls-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 10px 0;
+  z-index: 10;
+  margin-bottom: 0px;
+}
 
-  .start-button {
-    padding: 5px 10px;
-    font-size: 16px;
-    background-color: #c85959;
-    color: white;
-    cursor: pointer;
-    border-color:red;
-    border-radius: 30px;
-    border-width: 10px;
+.stats-container {
+  display: flex;
+  gap: 20px;
+  font-size: 0.7em;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4px 8px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
 
-  }
-  
-  .check-button {
-    padding: 5px 10px;
-    font-size: 16px;
-    background-color: #2eb15c;
-    color: white;
-    cursor: pointer;
-    border-color: rgb(8, 247, 196);
-    border-radius: 30px;
-    border-width: 10px;
-  }
+.start-button, .fase1 , .fase2{
+  padding: 4px 8px;
+  font-size: 0.7em;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  background-color: #e63946;
+  border: 2px solid #d00000;
+  z-index: 10;
+  position: relative;
+  pointer-events: auto;
+}
 
-  .fase1 {
-    padding: 5px 10px;
-    font-size: 16px;
-    background-color: #1307fa;
-    color: white;
-    cursor: pointer;
-    border-color:rgb(6, 181, 250);
-    border-radius: 30px;
-    border-width: 10px;
-  }
+.fase1 {
+  background-color: #1e90ff;
+  border: 2px solid #00b7eb;
+}
+.fase2 {
+  background-color: #0a7719;
+  border: 2px solid #3cd828;
+}
 
+.start-button:hover, .fase1:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
 
-  
-  h1 {
-    margin: 0px;
-    margin-top: 0px;
-    /*margin-bottom: 20px;*/
-  }
-  
-  .buttons-container {
-    display: flex;
-    gap: 500px;/*espaçamento entre os botões*/
-    margin-top: 0px;
-    
-   
-  }
-  
-  button {
-    /*padding: 10px 20px;tamanho botao*/
-    /*font-size: 25px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 5px;*/
-    cursor: pointer;
-   
-  }
+.start-button:focus, .fase1:focus ,.fase2:focus {
+  outline: 1px solid #ffd700;
+  outline-offset: 1px;
+}
 
-  button:last-child {
-    margin-right: 0; /* Remova a margem do último botão para evitar espaçamento extra */
-  }
-  
-  button:hover {
-    background-color: #fa060a;
-  }
-  
-  
-  .game-board {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    gap: 5px;/*tamanho do quadro de cartas*/
-    margin-top: 0px;
-  }
-  
-  .card {
-    width: 300px;
-    height: 560px;
-    background-image: url(./images1/verso.png); 
-    background-size: cover; 
-    background-color: lightgray;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    cursor: pointer;
-  }
-  
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 5px;
+  margin-top: 10px;
+  max-width: 100%;
+  z-index: 5;
+}
+
+.card {
+  width: 150px;
+  height: 280px;
+  background-image: url(./images1/verso.png);
+  background-size: cover;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  z-index: 5;
+  pointer-events: auto;
+  transform-style: preserve-3d;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card.flipped::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  transform: rotateY(180deg);
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.success-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: #ffd700;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 0.9em;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.success-message.hidden {
+  display: none;
+}
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  pointer-events: none;
+}
