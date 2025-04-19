@@ -232,5 +232,5 @@ window.location.href = "../fase6/fase6.html";
 }
 function redirecionar2() {
 console.log("redirecionar2: Navigating to estudar.html");
-window.location.href = "www.google.com.br";
+window.location.href = "Estudar.html";
 }
