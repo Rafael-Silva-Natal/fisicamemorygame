@@ -232,5 +232,5 @@ function redirecionar1() {
 }
 function redirecionar2() {
   console.log("redirecionar2: Navigating to estudar.html");
-  window.location.href = "Estudar.html";
+  window.location.href = "../Estudar.html";
 }
