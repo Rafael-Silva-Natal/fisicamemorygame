@@ -13,10 +13,10 @@ body {
 }
 
 h5 {
-  color:rgb(7, 248, 27);
+  color:orange;
   margin: 1px 0;
   font-size: 1.5m;
-  text-shadow: 2px 2px 4px rgba(250, 20, 20, 0.342);
+  text-shadow: 2px 2px 4px green;
   z-index: 10;
 }
 
@@ -61,8 +61,8 @@ h5 {
   border: 2px solid #00b7eb;
 }
 .fase2 {
-  background-color: #0a7719;
-  border: 2px solid #3cd828;
+  background-color:rgb(5, 209, 22);
+    border: 2px solid orange;
 }
 
 .start-button:hover, .fase1:hover {

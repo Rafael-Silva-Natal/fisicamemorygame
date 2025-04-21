@@ -44,7 +44,7 @@ function flipCard(card) {
   flippedCards.push(card);
   if (flippedCards.length === 2) {
     canFlip = false;
-    setTimeout(checkCards, 1000);
+    setTimeout(checkCards, 3000);
   }
 }
 
